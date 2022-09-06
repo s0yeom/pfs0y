@@ -1,0 +1,287 @@
+@charset "UTF-8";
+
+* { margin: 0; padding: 0; }
+li { list-style: none; }
+a { text-decoration: none; }
+
+@font-face {
+  font-family: 'PyeongChangPeace-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PyeongChang-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChang-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+    font-family: 'NEXON Lv2 Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.hidden { position: absolute; left: -9999px; }
+.color { color: #ffe71c; }
+
+body { width: 100%;
+      font-family: 'NEXON Lv2 Gothic', sans-serif;
+      font-weight: 400; font-size: 18px; }
+
+h1, h2, h3, h4 { font-family: 'PyeongChangPeace-Bold'; }
+.bold { font-family: 'PyeongChang-Bold' }
+
+
+.circleWrap { position: relative; }
+.circle { position: absolute; z-index: 9;
+          background: url(../images/circle.png) no-repeat center / cover; }
+.circle1 { width: 195px; height: 195px;
+            top: 750px; left: 8%; }
+.circle2 { width: 100px; height: 100px;
+            top: 50px; left: 38%; }
+.circle3 { width: 100px; height: 100px;
+            top: 350px; left: 25%; }
+.circle4 { width: 160px; height: 160px;
+            top: 750px; left: 65%; }
+
+
+#mainBg { height: 100vh;
+          background: url(../images/bg1.jpg) no-repeat center / cover; }
+
+#mainWrap h1 { position: absolute; color: #fff; font-size: 48px;
+                left: 3%; top: 8%; }
+
+#infoBg { margin-left: 30%;
+          width: 70%; height: 100vh; background: #fff;
+          border-top-left-radius: 500px; border-bottom-left-radius: 500px;
+          display: flex; justify-content: center; align-items: center; }
+
+#infoWrap { width: 60%; height: 60%; padding-left: 20%;
+            display: grid; grid-template-columns: auto auto;
+            gap: 10%;
+            color: #282c60; }
+/* #infoWrap > div { background: #ccc; } */
+
+#info1 { grid-column: 1 / 3; }
+#info1 dt { font-size: 36px; margin-bottom: 5%; }
+#info1 dd { font-size: 24px; }
+
+#info2 { }
+#info2 dt { font-size: 24px; margin-bottom: 5%; }
+#info2 dd { margin: 1% 0; }
+#info2 dd span { padding-left: 95px; }
+
+#info3 { grid-area: 3 / 1; grid-column: 1 / 3; }
+.skill li { display: flex; }
+.skill li span { margin-right: 50px; font-size: 24px; }
+.skillList { display: flex; }
+.skillList li { width: 52px; height: 52px; margin-right: 10px; }
+.skillList1 li:nth-child(1) { background: url(../images/skill1.png) no-repeat center / cover; }
+.skillList1 li:nth-child(2) { background: url(../images/skill2.png) no-repeat center / cover; }
+.skillList1 { margin-bottom: 3%; }
+.skillList2 li:nth-child(1) { background: url(../images/skill3.png) no-repeat center / cover; }
+.skillList2 li:nth-child(2) { background: url(../images/skill4.png) no-repeat center / cover; }
+.skillList2 li:nth-child(3) { background: url(../images/skill5.png) no-repeat center / cover; }
+
+#info4 { display: grid; grid-template-columns: auto; gap: 10%; }
+#info4 dt { font-size: 20px; }
+
+
+#navBg { position: fixed; top: -70px; z-index: 999;
+          width: 100%; height: 70px; background: rgba(255, 255, 255, 0.5); }
+
+#navWrap { width: 60%; margin: 0 auto; }
+#navWrap ul { display: flex; justify-content: space-around; }
+#navWrap ul li { line-height: 70px; width: 20%; text-align: center; }
+#navWrap ul li a { color: #ffcc00; display: block;
+                    font-family: 'PyeongChangPeace-Bold'; font-size: 20px; }
+/* #navWrap ul li:hover a { background: #ccc; } */
+
+
+#listBg { height: 100vh; position: relative;
+          background: url(../images/bg2.jpg) no-repeat center / cover; }
+
+#identity { width: 80%; margin: 0 auto; padding-top: 5%; }
+#identity dl { color: #fff; }
+#identity > dl > dt { font-size: 36px; font-family: 'PyeongChangPeace-Bold';
+                      text-align: right; margin-bottom: 3%; }
+#identity > dl > dd { text-align: right; }
+#id1 { margin-bottom: 2%; }
+#id2 {}
+#identity .id { font-size: 28px; position: relative; }
+#identity .id::after { content: ""; width: 22px; height: 23px;
+                        position: absolute; top: -5px;
+                        background: url(../images/idStar.png) no-repeat center; }
+
+#pfListBg { position: absolute; bottom: 0;
+            width: 70%; height: 60%; background: #fff;
+            border-top-right-radius: 350px; border-bottom-right-radius: 350px; }
+
+/* #listWrap { position: relative; } */
+#listWrap { height: 100%; position: relative; }
+#listWrap h2 { font-size: 40px; color: #282c60;
+              position: absolute; top: 8%; left: 10%; }
+.pfList { width: 60%; height: 100%;
+          font-size: 20px; margin: 0 auto;
+          box-sizing: border-box; padding-top: 150px; }
+.pfList li { margin-bottom: 5%; }
+.pfList a { color: #282c60; }
+.pfList dl dt { position: relative; }
+.pfList dl dt::before { content: ""; width: 36px; height: 36px;
+                        position: absolute; left: -60px;
+                        background: url(../images/listStar.png) no-repeat center;
+                        opacity: 0; }
+.pfList li:hover dl dt::before { opacity: 1; }
+.pfList dl dd { margin-left: 5%; margin-top: 1%; }
+
+
+#portfolio1Bg, #portfolio2Bg, #portfolio3Bg, #portfolio4Bg
+        { height: 100vh;
+          background: url(../images/bg3.jpg) no-repeat center / cover; }
+
+#portfolio1Wrap, #portfolio2Wrap, #portfolio3Wrap, #portfolio4Wrap
+        { display: flex; width: 95%; margin: 0 auto;
+          position: relative; color: #282c60; top: 200px; }
+
+h3 { position: absolute; width: 100%; top: -100px;
+      text-align: center; font-size: 40px; color: #fff; }
+
+
+#p1_1, #p1_2, #p1_3 { background: #fff; border-radius: 50px;
+                      margin: 0 15px; padding: 50px 100px;
+                      box-sizing: border-box; }
+
+.p1 { width: 45%; }
+
+#p1_1 { height: 250px; margin-bottom: 30px;
+        display: grid; grid-template-columns: auto auto; gap: 50px; }
+.pText1_1 {  }
+.pText1_2 { grid-area: 2 / 1; }
+.pText1_3 { grid-row: 1 / 3; }
+
+#p1_2 { height: 450px; }
+#p1_2 p:nth-child(1) { margin-bottom: 1%; }
+#p1_2 p:nth-child(2) { margin-bottom: 30px; }
+#p1_2 p:nth-child(3) { margin-bottom: 15px; }
+#p1_2 p:nth-child(4) { margin-bottom: 30px; }
+#p1_2 p:nth-child(5) { }
+
+#p1_3 { position: relative; height: 730px; width: 55%; }
+#p1_3 > a { position: absolute; color: #282c60;
+          bottom: 50px; right: 100px;
+          font-family: 'PyeongChangPeace-Bold'; font-size: 24px; }
+.mockup1 ul li { position: absolute; width: 100%; text-align: center;
+                  left: 0; top: 100px; }
+#mockup1Btn {  }
+#mockup1Btn a { position: absolute; top: calc(50% - 256px);
+                display: block; width: 302px; height: 512px; }
+#mockup1Btn a.prev { background: url(images/btnPrev.png) no-repeat center; }
+#mockup1Btn a.next { background: url(images/btnNext.png) no-repeat center; }
+
+
+#p2_1, #p2_2 { background: #fff; border-radius: 50px; height: 730px;
+                margin: 0 15px; padding: 50px 100px;
+                box-sizing: border-box; }
+
+#p2_1 { width: 55%; position: relative; }
+#p2_1 a { position: absolute; color: #282c60;
+          bottom: 50px; right: 100px;
+          font-family: 'PyeongChangPeace-Bold'; font-size: 24px; }
+
+.mockup2 ul li { position: absolute; width: 100%; text-align: center;
+                  left: 0; top: 80px; }
+
+#p2_2 { width: 45%; position: relative;
+        display: grid; grid-template-columns: auto auto; gap: 25px; }
+#p2_2 a { position: absolute; color: #282c60;
+          bottom: 50%; right: 100px;
+          font-family: 'PyeongChangPeace-Bold'; font-size: 24px; }
+.pText2_1 {  }
+.pText2_2 {  }
+.pText2_3 { grid-column: 1 / 3; }
+.pText2_4 { grid-column: 1 / 3; }
+
+.pText2_4 p:nth-child(1) { margin-bottom: 15px; }
+.pText2_4 p:nth-child(2) { margin-bottom: 15px; }
+.pText2_4 p:nth-child(3) { margin-bottom: 15px; }
+.pText2_4 p:nth-child(4) { margin-bottom: 15px; }
+.pText2_4 p:nth-child(5) {}
+
+
+#p3_1, #p3_2, #p3_3 { background: #fff; border-radius: 50px; height: 730px;
+                      margin: 0 15px; padding: 50px 100px;
+                      box-sizing: border-box; }
+
+.p3 { width: 35%; }
+
+#p3_1 { height: 250px; margin-bottom: 30px; }
+
+.pText3_1 { margin-bottom: 50px; }
+
+#p3_2 { height: 450px; position: relative; }
+#p3_2 a { position: absolute; color: #282c60;
+          top: 50px; right: 100px;
+          font-family: 'PyeongChangPeace-Bold'; font-size: 24px; }
+
+#p3_2 p:nth-child(1) { margin-bottom: 30px; }
+#p3_2 p:nth-child(2) { margin-bottom: 30px; }
+#p3_2 p:nth-child(3) { margin-bottom: 30px; }
+#p3_2 p:nth-child(4) { }
+
+#p3_3 { position: relative; height: 730px; width: 65%; }
+#p3_3 a { position: absolute; color: #282c60;
+          bottom: 50px; right: 100px;
+          font-family: 'PyeongChangPeace-Bold'; font-size: 24px; }
+.mockup3_1 { position: absolute; text-align: center;
+              left: 100px; top: 180px; }
+.mockup3_2 { position: absolute; width: 50%; text-align: center;
+              right: 0; top: 100px; }
+
+
+#p4_1, #p4_2 { background: #fff; border-radius: 50px; height: 730px;
+                margin: 0 15px; padding: 50px 100px;
+                box-sizing: border-box; }
+
+#p4_1 { width: 70%; position: relative; }
+#p4_1 a { position: absolute; color: #282c60;
+          bottom: 50px; right: 100px;
+          font-family: 'PyeongChangPeace-Bold'; font-size: 24px; }
+.mockup4_1 { position: absolute; text-align: center;
+              left: 120px; top: 80px; }
+.mockup4_2 { position: absolute; text-align: center;
+              right: 150px; top: 80px; }
+
+#p4_2 { width: 30%; position: relative; }
+#p4_2 a { position: absolute; color: #282c60;
+          top: 50px; right: 100px;
+          font-family: 'PyeongChangPeace-Bold'; font-size: 24px; }
+
+.pText4_1 { margin-bottom: 30px; }
+
+.pText4_2 { margin-bottom: 75px; }
+.pText4_2 ul { display: flex; }
+.pText4_2 ul li { margin-right: 10px; text-transform: uppercase; }
+
+.pText4_3 p:nth-child(1) { margin-bottom: 15px; }
+.pText4_3 p:nth-child(2) { margin-bottom: 30px; }
+.pText4_3 p:nth-child(3) { margin-bottom: 30px; }
+
+
+/* #portfolioAll { position: relative; } */
+
+#btnBg { position: fixed; top: calc(50% - 73px); right: 30px; }
+
+#btnWrap { display: flex; flex-flow: column;
+            justify-content: center; align-items: center;
+            width: 20px; }
+#btnWrap li { margin: 10px 0; }
+#btnWrap li a { display: block; width: 15px; height: 15px;
+                background: #f0f0f0; border-radius: 50%;
+                text-indent: -9999px; }
+#btnWrap li a.on { width: 20px; height: 20px; background: #ffcc00; }
+
+
+
+@media screen and (max-width: 1500px) {}
